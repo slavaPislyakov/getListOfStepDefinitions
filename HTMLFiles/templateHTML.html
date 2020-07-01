@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Implemented steps</title>
+    <style>
+        .center {
+            color: #99362a;
+            margin: auto;
+            width: 60%;
+            border: 1px solid #cc9968;
+            background-color: #d8d291;
+            padding: 10px;
+            font-weight: bold;
+            font-size: large;
+            font-family: 'Source Sans Pro', Tahoma, sans-serif;
+        }
+        .pEven {
+            color: #1b6b1f;
+            font-weight: bold;
+            font-style: normal;
+            font-family: 'Source Sans Pro', Tahoma, sans-serif;
+        }
+        .underline {
+            padding-top: 10px;
+            align-content: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+<header class="center">Implemented steps</header>
+<div class="center">
+    {{#each steps}}
+    <p class="pEven underline">{{@index}}. {{name}}</p>
+    <p class="pEven">Examples:</p>
+    {{#each this.value}}
+    <div class="center">{{this}}</div>
+    {{/each}}
+    {{/each}}
+</div>
+</body>
+
+</html>
